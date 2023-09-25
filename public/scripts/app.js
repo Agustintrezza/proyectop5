@@ -70,17 +70,6 @@ if(nombreUsuario === null || nombreUsuario.length <= 0) {
     
 
     const getTickets = (cantidad, lugar) => {
-        
-        localStorage.setItem('cantidad-',cantidad);
-        localStorage.setItem('lugar-',lugar);
-
-        let cantidadDeLugaresActualizada = cantidad - 1;
-        console.log(cantidadDeLugaresActualizada);
-
-        console.log(cantidad, lugar)
-        console.log(`A este servicio le quedan + ${cantidadDeLugaresActualizada}`)
-
-
     if(cantidad > 0) {
         swal({
             title: `Confirmas la compra para el concierto en "${lugar}" ?`,
@@ -93,16 +82,13 @@ if(nombreUsuario === null || nombreUsuario.length <= 0) {
             dangerMode: true,
          }).then((isConfirm) => {
             if(isConfirm) {
-            
-
                 swal({
                     icon: "success",
                     title: `¡FELICITACIONES ${nombreUsuario}!`,
                     text: `¡Compraste existosamente tu entrada para el show en el estadio "${lugar}"!`,
                 })  
             } 
-         }
-      
+         }  
     )} else {
         swal({
             icon: "warning",

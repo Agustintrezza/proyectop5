@@ -1,0 +1,9 @@
+body {
+    background-image: url('./imagenes/bocanada7.webp');
+    opacity: 100%;
+}
+
+.contenedor-titulo-texto {
+    background-color: #fff;
+    color: red;
+}
