@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert"></script>
     <title>Login</title>
 
     <style>
@@ -108,16 +109,17 @@
                 <h1 class="text-slate-300 text-lg text-center md:text-start md:text-xl font-bold">!Creá una cuenta y comenzá!</h1>
             </div>
 
-            <form action="https://formspree.io/f/xyyqebln" method="POST" class="flex flex-col">
+            <!-- action="https://formspree.io/f/xyyqebln" -->
+            <form id="formulario-login" method="POST" class="flex flex-col">
 
                 <label class="text-slate-300 text-sm mt-3 mb-1" for="email">Email</label>
-                <input class="bg-neutral-900 rounded-md p-1.5 text-white text-sm h-10 placeholder:text-sm focus-visible:outline-none" id="email" type="email" name="emailUsuario" placeholder="Ingresá una casilla de email" required> 
+                <input id="email" name="email" class="bg-neutral-900 rounded-md p-1.5 text-white text-sm h-10 placeholder:text-sm focus-visible:outline-none" id="email" type="email" name="emailUsuario" placeholder="Ingresá una casilla de email" required> 
 
                 <label class="text-slate-300 text-sm mt-3 mb-1" for="password" for="">Password</label>
-                <input class="bg-neutral-900 rounded-md p-1.5 text-white text-sm h-10 placeholder:text-sm focus-visible:outline-none" id="password" type="password" name="claveUsuario" placeholder="Ingresá tu password" required>
+                <input id="contraseña" name="contraseña" class="bg-neutral-900 rounded-md p-1.5 text-white text-sm h-10 placeholder:text-sm focus-visible:outline-none" id="password" type="password" name="claveUsuario" placeholder="Ingresá tu password" required>
 
                 <div class="flex justify-center items-center mt-6 mb-2 cursor-pointer">
-                    <input class="cursor-pointer flex items-center justify-center w-full text-lg text-white bg-gradient-to-r from-blue-700 to-violet-500 p-1 h-10 rounded-full transition ease-in-out delay-25 hover:scale-105" type="submit" value="Iniciar Sesión">
+                    <button type="submit" class="cursor-pointer flex items-center justify-center w-full text-lg text-white bg-gradient-to-r from-blue-700 to-violet-500 p-1 h-10 rounded-full transition ease-in-out delay-25 hover:scale-105">Iniciar Sesión</button>
                 </div>
 
                 <div class="flex justify-center my-2">
@@ -134,5 +136,7 @@
     </div>
 
 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./scripts/signin.js"></script>
 </body>
 </html>

@@ -32,7 +32,7 @@ router.post('/crearalbum', async (req, res) => {
         await albumModel.create(req.body);
         res.status(200).send("Álbum creado exitosamente!");
     } catch (error) {
-        res.status(200).send("No se pudo crear el álbum, vuelva a intentarlo.");
+        res.status(500).send("No se pudo crear el álbum, vuelva a intentarlo.");
         console.log(error)
     }
 });
